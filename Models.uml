@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="306.0" y="130.0">ModelPassenger</node>
+    <node x="839.0" y="106.0">ModelRoute</node>
+    <node x="495.0" y="130.0">ModelCarriage</node>
+    <node x="0.0" y="279.0">ModelTypeCarriage</node>
+    <node x="0.0" y="106.0">ModelTicket</node>
+    <node x="440.25" y="0.0">ModelBaseEntity</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="ModelPassenger" target="ModelBaseEntity">
+      <point x="0.0" y="-40.0" />
+      <point x="390.5" y="86.0" />
+      <point x="502.875" y="86.0" />
+      <point x="-20.875" y="28.0" />
+    </edge>
+    <edge source="ModelTicket" target="ModelBaseEntity">
+      <point x="0.0" y="-64.0" />
+      <point x="143.0" y="76.0" />
+      <point x="461.125" y="76.0" />
+      <point x="-62.625" y="28.0" />
+    </edge>
+    <edge source="ModelCarriage" target="ModelBaseEntity">
+      <point x="0.0" y="-40.0" />
+      <point x="657.0" y="86.0" />
+      <point x="544.625" y="86.0" />
+      <point x="20.875" y="28.0" />
+    </edge>
+    <edge source="ModelRoute" target="ModelBaseEntity">
+      <point x="0.0" y="-64.0" />
+      <point x="941.5" y="76.0" />
+      <point x="586.375" y="76.0" />
+      <point x="62.625" y="28.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="522.0" y="268.0" />
+  <SelectedNodes>
+    <node>ModelBaseEntity</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
