@@ -5,4 +5,5 @@
 *.ear
 notes.txt
 Some.java
+target/
 out/
