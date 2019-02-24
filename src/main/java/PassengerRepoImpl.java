@@ -6,7 +6,6 @@ public class PassengerRepoImpl implements PassengerRepo {
     private static final String PASSENGER_FILE_PATH = "/home/maya/IdeaProjects/railwaybookingoffice/" +
                                                         "src/main/resources/Passenger.csv";
 
-
     public void save(Passenger passenger) throws IOException {
         File filewithPassengers = new File(PASSENGER_FILE_PATH);
         FileWriter fw = new FileWriter(filewithPassengers,true);
