@@ -1,3 +1,3 @@
-public enum ModelTypeCarriage {
+public enum CarriageType {
     BERTH,COMPARTMENT,DELUXE;
 }

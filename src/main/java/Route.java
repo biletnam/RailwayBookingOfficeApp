@@ -1,11 +1,10 @@
-public class ModelRoute extends ModelBaseEntity {
+public class Route extends BaseEntity {
     private String departurePlace;
     private String arrivalPlace;
     private String departureTime;
     private String arrivalTime;
 
-    public ModelRoute(int id, String departurePlace, String arrivalPlace, String departureTime, String arrivalTime) {
-        super(id);
+    public Route(int id, String departurePlace, String arrivalPlace, String departureTime, String arrivalTime) {
         this.departurePlace = departurePlace;
         this.arrivalPlace = arrivalPlace;
         this.departureTime = departureTime;

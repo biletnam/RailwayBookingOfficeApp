@@ -1,12 +1,28 @@
-public class ModelPassenger extends ModelBaseEntity {
+import java.util.ArrayList;
+import java.util.List;
+
+public class Passenger extends BaseEntity {
+    private int id; // *--> it's for saving "id" in the moment of creating
     private String firstName;
     private String lastName;
 
-    public ModelPassenger(int id, String firstName, String lastName) {
-        super(id);
+
+    @Override
+    public int getId() {
+        return id;
+    }
+
+    @Override
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Passenger(String firstName, String lastName) {
+        this.id = super.getId(); // *--> it's for saving "id" in the moment of creating
         this.firstName = firstName;
         this.lastName = lastName;
     }
+
 
     public String getFirstName() {
         return firstName;
@@ -27,7 +43,8 @@ public class ModelPassenger extends ModelBaseEntity {
     @Override
     public String toString() {
         return "Passenger{" +
-                "firstName='" + firstName + '\'' +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 '}';
     }
