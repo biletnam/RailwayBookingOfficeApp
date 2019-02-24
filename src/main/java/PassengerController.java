@@ -12,11 +12,11 @@ public class PassengerController {
         return PassengerRepo.findAll();
     }
 
-    public void delete(Integer id) {
+    public void delete(Integer id) throws IOException {
         PassengerRepo.delete(id);
     }
 
-    public Passenger getById(Integer id) {
+    public Passenger getById(Integer id) throws IOException {
         return PassengerRepo.getById(id);
     }
 }

@@ -1,12 +1,11 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class BaseEntity {
+    private int id;
 
-    private static int id; // --> AutoId
+    public BaseEntity(int id) {
+        this.id = id;
+    }
 
     public BaseEntity() {
-        id++;
     }
 
     public int getId() {

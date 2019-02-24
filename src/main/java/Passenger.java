@@ -1,28 +1,12 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class Passenger extends BaseEntity {
-    private int id; // *--> it's for saving "id" in the moment of creating
     private String firstName;
     private String lastName;
 
-
-    @Override
-    public int getId() {
-        return id;
-    }
-
-    @Override
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public Passenger(String firstName, String lastName) {
-        this.id = super.getId(); // *--> it's for saving "id" in the moment of creating
+    public Passenger(int id, String firstName, String lastName) {
+        super(id);
         this.firstName = firstName;
         this.lastName = lastName;
     }
-
 
     public String getFirstName() {
         return firstName;
@@ -43,7 +27,7 @@ public class Passenger extends BaseEntity {
     @Override
     public String toString() {
         return "Passenger{" +
-                "id=" + id +
+                "id=' " + super.getId() + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 '}';
