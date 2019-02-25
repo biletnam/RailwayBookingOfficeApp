@@ -1,10 +1,19 @@
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 public class Route extends BaseEntity {
     private String departurePlace;
     private String arrivalPlace;
-    private String departureTime;
-    private String arrivalTime;
+    private LocalDateTime departureTime;
+    private LocalDateTime arrivalTime;
 
-    public Route(int id, String departurePlace, String arrivalPlace, String departureTime, String arrivalTime) {
+    public Route(){
+
+    };
+
+    public Route(int id, String departurePlace, String arrivalPlace,
+                 LocalDateTime departureTime, LocalDateTime arrivalTime) {
+        super(id);
         this.departurePlace = departurePlace;
         this.arrivalPlace = arrivalPlace;
         this.departureTime = departureTime;
@@ -27,19 +36,19 @@ public class Route extends BaseEntity {
         this.arrivalPlace = arrivalPlace;
     }
 
-    public String getDepartureTime() {
+    public LocalDateTime getDepartureTime() {
         return departureTime;
     }
 
-    public void setDepartureTime(String departureTime) {
+    public void setDepartureTime(LocalDateTime departureTime) {
         this.departureTime = departureTime;
     }
 
-    public String getArrivalTime() {
+    public LocalDateTime getArrivalTime() {
         return arrivalTime;
     }
 
-    public void setArrivalTime(String arrivalTime) {
+    public void setArrivalTime(LocalDateTime arrivalTime) {
         this.arrivalTime = arrivalTime;
     }
 }
