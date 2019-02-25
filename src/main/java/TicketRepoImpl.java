@@ -1,23 +1,30 @@
+import java.io.IOException;
 import java.util.List;
 
-public class TicketRepoImpl implements RouteRepo {
-    public void save(Route Route) {
+public class TicketRepoImpl implements TicketRepo {
+
+    @Override
+    public void save(Ticket ticket) throws IOException {
 
     }
 
-    public List<Route> findAll() {
+    @Override
+    public List<Ticket> findAll() throws IOException {
         return null;
     }
 
-    public void update(Route route) {
+    @Override
+    public void update(Ticket ticket) {
 
     }
 
-    public void delete(Integer integer) {
+    @Override
+    public void delete(Integer integer) throws IOException {
 
     }
 
-    public Route getById(Integer id) {
+    @Override
+    public Ticket getById(Integer integer) throws IOException {
         return null;
     }
 }
