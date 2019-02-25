@@ -42,9 +42,8 @@ public class PassengerRepoImpl implements PassengerRepo {
         }
         return passengersList;
     }
-    public void update(Passenger passenger) {
 
-    }
+
 
     public void delete(Integer id) throws IOException {
         File filewithPassengers = new File(PASSENGER_FILE_PATH);
