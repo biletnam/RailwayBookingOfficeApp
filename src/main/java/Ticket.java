@@ -6,6 +6,10 @@ public class Ticket extends BaseEntity {
     private Route Route;
     private Date buyingTime;
 
+    public Ticket (){
+
+    }
+
     public Ticket(int id, Carriage carriage, Passenger passenger, Route route, Date buyingTime) {
         this.Carriage = Carriage;
         this.Passenger = Passenger;
