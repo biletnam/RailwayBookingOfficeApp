@@ -4,15 +4,35 @@ import java.time.format.DateTimeFormatter;
 
 public class ZTestAppRunner {
     public static void main(String[] args) throws IOException {
-        PassengerRepo pr = new PassengerRepoImpl();
+     /*   PassengerRepo pr = new PassengerRepoImpl();
         Passenger Passenger =new Passenger(10,"Michael","Sullivan");
-        Passenger Passenger2 =new Passenger(20,"John","Rooney");
+        Passenger Passenger2 =new Passenger(20,"John","Rooney");*/
         /*pr.save(Passenger);
         pr.save(Passenger2);
         System.out.println(pr.findAll());
         System.out.println(pr.getById(10));*/
 
 
+//-------------------------Testing Carriage------------------------------------------------
+        CarriageRepo carriageRepo = new CarriageRepoImpl();
+        Carriage carriage = new Carriage();
+        carriage.setId(3);
+        carriage.setCarriageType(CarriageType.BERTH);
+
+        System.out.println(carriage.getCarriageType());
+
+        Carriage carriage2 = new Carriage(4,CarriageType.DELUXE);
+        System.out.println(carriage2.getCarriageType());
+//
+       carriageRepo.save(carriage);
+        carriageRepo.save(carriage2);
+//        carriageRepo.delete(2);
+        System.out.println(carriageRepo.getById(2));
+        System.out.println(carriageRepo.findAll());
+
+
+
+/*
 //--------------------------Testing Route--------------------------------------------------
         RouteRepo rr = new RouteRepoImpl();
 
@@ -35,11 +55,11 @@ public class ZTestAppRunner {
         Route route2 = new Route(15,"Kiev","Lviv",departureDateTime2,arrivalDateTime2);
         rr.save(route);
         rr.save(route2);
-//        System.out.println(rr.getById(12));
+
         System.out.println(rr.searchByDeparturePlace("Kiev"));
         System.out.println(rr.searchByarrivalPlace("Lviv"));
 
-//        rr.delete(12);
+//------------------------------------------------------------------------------------------*/
 
 
 

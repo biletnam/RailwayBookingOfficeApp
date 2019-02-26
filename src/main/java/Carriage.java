@@ -2,11 +2,26 @@ import java.util.Set;
 
 public class Carriage extends BaseEntity {
     private CarriageType carriageType;
-    private Set<Integer> numberOfSeats;
+    private  int numberOfFreeSeats;
 
-    public Carriage(CarriageType carriageType, Set<Integer> numberOfSeats) {
+    public Carriage() {
+
+    }
+
+    public Carriage(int id, CarriageType carriageType) {
+        super(id);
         this.carriageType = carriageType;
-        this.numberOfSeats = numberOfSeats;
+        switch(carriageType) {
+            case BERTH:
+                numberOfFreeSeats = 54;
+                break;
+            case COMPARTMENT:
+                numberOfFreeSeats = 36;
+                break;
+            case DELUXE:
+                numberOfFreeSeats = 18;
+                break;
+        }
     }
 
     public CarriageType getCarriageType() {
@@ -15,12 +30,33 @@ public class Carriage extends BaseEntity {
 
     public void setCarriageType(CarriageType carriageType) {
         this.carriageType = carriageType;
+        switch(carriageType) {
+            case BERTH:
+                numberOfFreeSeats = 54;
+                break;
+            case COMPARTMENT:
+                numberOfFreeSeats = 36;
+                break;
+            case DELUXE:
+                numberOfFreeSeats = 18;
+                break;
+        }
     }
 
-    public Set<Integer> getNumberOfSeats() {
-        return numberOfSeats;
+    public int getNumberOfFreeSeats() {
+        return numberOfFreeSeats;
     }
-    public void setNumberOfSeats(Set<Integer> numberOfSeats) {
-        this.numberOfSeats = numberOfSeats;
+
+    public void setNumberOfFreeSeats(int numberOfFreeSeats) {
+        this.numberOfFreeSeats = numberOfFreeSeats;
+    }
+
+    @Override
+    public String toString() {
+        return "Carriage{" +
+                "carriageType=" + carriageType +
+                ", numberOfFreeSeats=" + numberOfFreeSeats +
+                '}';
     }
 }
+

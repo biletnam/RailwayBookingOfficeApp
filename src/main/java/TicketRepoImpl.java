@@ -12,12 +12,6 @@ public class TicketRepoImpl implements TicketRepo {
     public List<Ticket> findAll() throws IOException {
         return null;
     }
-
-    @Override
-    public void update(Ticket ticket) {
-
-    }
-
     @Override
     public void delete(Integer integer) throws IOException {
 

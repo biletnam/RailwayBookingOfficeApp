@@ -26,10 +26,6 @@ public class RouteRepoImpl implements RouteRepo {
         return null;
     }
 
-    public void update(Route route) {
-
-    }
-
     public void delete(Integer id) throws IOException {
         File fileWithRoutes = new File(PASSENGER_FILE_PATH);
         List<String> list = new ArrayList<>();
