@@ -148,4 +148,10 @@ public class RouteRepoImpl implements RouteRepo {
     public List<Route> searchByDate(String date) {
         return null;
     }
+
+    @Override
+    public List<Route> searchByAll(String departurePlace, String arrivalPlace, String date) {
+        
+        return null;
+    }
 }

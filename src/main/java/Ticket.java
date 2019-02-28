@@ -1,20 +1,24 @@
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public class Ticket extends BaseEntity {
     private Carriage Carriage;
     private Passenger Passenger;
     private Route Route;
-    private Date buyingTime;
+    private LocalDateTime buyingTime;
+    private int place;
 
     public Ticket (){
-
+        buyingTime = LocalDateTime.now();
     }
 
-    public Ticket(int id, Carriage carriage, Passenger passenger, Route route, Date buyingTime) {
-        this.Carriage = Carriage;
-        this.Passenger = Passenger;
-        this.Route = Route;
-        this.buyingTime = buyingTime;
+    public Ticket(int id, Carriage carriage, Passenger passenger, Route route) {
+        super(id);
+        Carriage = carriage;
+        Passenger = passenger;
+        Route = route;
+        buyingTime = LocalDateTime.now();
+        place = 0;
     }
 
     public Carriage getCarriage() {
@@ -22,7 +26,7 @@ public class Ticket extends BaseEntity {
     }
 
     public void setCarriage(Carriage carriage) {
-        this.Carriage = Carriage;
+        Carriage = carriage;
     }
 
     public Passenger getPassenger() {
@@ -30,7 +34,7 @@ public class Ticket extends BaseEntity {
     }
 
     public void setPassenger(Passenger passenger) {
-        this.Passenger = Passenger;
+        Passenger = passenger;
     }
 
     public Route getRoute() {
@@ -38,14 +42,33 @@ public class Ticket extends BaseEntity {
     }
 
     public void setRoute(Route route) {
-        this.Route = Route;
+        Route = route;
     }
 
-    public Date getBuyingTime() {
+    public LocalDateTime getBuyingTime() {
         return buyingTime;
     }
 
-    public void setBuyingTime(Date buyingTime) {
+    public void setBuyingTime(LocalDateTime buyingTime) {
         this.buyingTime = buyingTime;
+    }
+
+    public int getPlace() {
+        return Carriage.getNumberOfFreeSeats();
+    }
+
+    public void setPlace(int place) {
+        this.place = place;
+    }
+
+    @Override
+    public String toString() {
+        return "Ticket{" +
+                "Carriage=" + Carriage +
+                ", PassengerId"+ Passenger +
+                ", RouteId" + Route +
+                ", buyingTime=" + buyingTime +
+                ", place=" + place +
+                '}';
     }
 }

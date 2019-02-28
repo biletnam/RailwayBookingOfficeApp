@@ -51,4 +51,14 @@ public class Route extends BaseEntity {
     public void setArrivalTime(LocalDateTime arrivalTime) {
         this.arrivalTime = arrivalTime;
     }
+
+    @Override
+    public String toString() {
+        return "Route{" +
+                departurePlace + '-' +
+                arrivalPlace + ' ' +
+                departureTime + "<-->"
+                + arrivalTime +
+                '}';
+    }
 }

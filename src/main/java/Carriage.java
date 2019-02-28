@@ -54,8 +54,9 @@ public class Carriage extends BaseEntity {
     @Override
     public String toString() {
         return "Carriage{" +
-                "carriageType=" + carriageType +
-                ", numberOfFreeSeats=" + numberOfFreeSeats +
+                "id=' " + super.getId() + '\'' + ", "
+                 + carriageType +
+                ", FreeSeats: " + numberOfFreeSeats +
                 '}';
     }
 }
