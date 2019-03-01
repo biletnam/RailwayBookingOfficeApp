@@ -1,12 +1,21 @@
+package controller;
+
+import model.Passenger;
+import repository.PassengerRepoImpl;
+
 import java.io.IOException;
 import java.util.List;
 
 public class PassengerController {
-    PassengerRepo PassengerRepo = new PassengerRepoImpl();
+    repository.PassengerRepo PassengerRepo = new PassengerRepoImpl();
 
     public void save(Passenger passenger) throws IOException {
-        PassengerRepo.save(passenger);
+        if(passenger == null){
+            throw  new IllegalArgumentException();
+        }else PassengerRepo.save(passenger);
     }
+
+
 
     public List<Passenger> findAll() throws IOException {
         return PassengerRepo.findAll();

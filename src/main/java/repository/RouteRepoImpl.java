@@ -1,5 +1,9 @@
+package repository;
+
+import model.Route;
+
+
 import java.io.*;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,13 +17,10 @@ public class RouteRepoImpl implements RouteRepo {
         try(BufferedWriter bw = new BufferedWriter(fw)) {
             String RouteToSting = route.getId() + ","
                     +route.getDeparturePlace() + ","
-                    +route.getArrivalPlace() + ","
-                    +route.getDepartureTime() + ","
-                    +route.getArrivalTime();
+                    +route.getArrivalPlace() + ",";
             bw.write(RouteToSting);
             bw.newLine();
         }
-
     }
 
     public List<Route> findAll() {
@@ -53,28 +54,17 @@ public class RouteRepoImpl implements RouteRepo {
     }
 
     public Route getById(Integer id) throws IOException {
-
         File fileWithRoutes = new File(PASSENGER_FILE_PATH);
         FileReader fr = new FileReader(fileWithRoutes);
         String line;
-        String departureStr;
-        String arrivalStr;
-
         try(BufferedReader bf = new BufferedReader(fr)){
             while((line = bf.readLine()) != null){
                 String[] arrOfStr = line.split(",");
                 if(arrOfStr[0].equals(Integer.toString(id))){
-                    departureStr = arrOfStr[3];
-                    arrivalStr = arrOfStr[4];
-                    LocalDateTime departureDateTime = LocalDateTime.parse(departureStr);
-                    LocalDateTime arrivalDateTime =  LocalDateTime.parse(arrivalStr);
-
                     return new Route(
                             id,
                             arrOfStr[1],
-                            arrOfStr[2],
-                            departureDateTime,
-                            arrivalDateTime);
+                            arrOfStr[2]);
                 }
             }
         }return null;
@@ -83,14 +73,14 @@ public class RouteRepoImpl implements RouteRepo {
 
 
 
-    @Override
-    public List<Route> searchByDeparturePlace(String departurePlace) throws IOException {
+ /*   @Override
+    public List<model.Route> searchByDeparturePlace(String departurePlace) throws IOException {
         File fileWithRoutes = new File(PASSENGER_FILE_PATH);
         FileReader fr = new FileReader(fileWithRoutes);
         String line;
         String departureStr;
         String arrivalStr;
-        List<Route> departurePlaceList = new ArrayList<>();
+        List<model.Route> departurePlaceList = new ArrayList<>();
 
         try(BufferedReader bf = new BufferedReader(fr)){
             while((line = bf.readLine()) != null){
@@ -102,7 +92,7 @@ public class RouteRepoImpl implements RouteRepo {
                     LocalDateTime arrivalDateTime =  LocalDateTime.parse(arrivalStr);
 
 
-                    departurePlaceList.add(new Route(
+                    departurePlaceList.add(new model.Route(
                             Integer.parseInt(arrOfStr[0]),
                             arrOfStr[1],
                             arrOfStr[2],
@@ -115,13 +105,13 @@ public class RouteRepoImpl implements RouteRepo {
     }
 
     @Override
-    public List<Route> searchByarrivalPlace(String arrivalPlace) throws IOException {
+    public List<model.Route> searchByarrivalPlace(String arrivalPlace) throws IOException {
         File fileWithRoutes = new File(PASSENGER_FILE_PATH);
         FileReader fr = new FileReader(fileWithRoutes);
         String line;
         String departureStr;
         String arrivalStr;
-        List<Route> arrivalPlaceList = new ArrayList<>();
+        List<model.Route> arrivalPlaceList = new ArrayList<>();
 
         try(BufferedReader bf = new BufferedReader(fr)){
             while((line = bf.readLine()) != null){
@@ -133,7 +123,7 @@ public class RouteRepoImpl implements RouteRepo {
                     LocalDateTime arrivalDateTime =  LocalDateTime.parse(arrivalStr);
 
 
-                    arrivalPlaceList.add(new Route(
+                    arrivalPlaceList.add(new model.Route(
                             Integer.parseInt(arrOfStr[0]),
                             arrOfStr[1],
                             arrOfStr[2],
@@ -142,16 +132,16 @@ public class RouteRepoImpl implements RouteRepo {
                 }
             }
         }return arrivalPlaceList;
-    }
+    }*/
 
-    @Override
-    public List<Route> searchByDate(String date) {
+   /* @Override
+    public List<model.Route> searchByDate(String date) {
         return null;
-    }
+    }*/
 
-    @Override
-    public List<Route> searchByAll(String departurePlace, String arrivalPlace, String date) {
+   /* @Override
+    public List<model.Route> searchByAll(String departurePlace, String arrivalPlace, String date) {
         
         return null;
-    }
+    }*/
 }

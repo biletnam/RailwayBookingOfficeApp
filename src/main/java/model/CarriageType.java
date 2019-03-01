@@ -1,3 +1,5 @@
+package model;
+
 public enum CarriageType {
     BERTH,COMPARTMENT,DELUXE;
 

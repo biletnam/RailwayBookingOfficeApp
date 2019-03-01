@@ -1,3 +1,7 @@
+package model;
+
+
+
 public class Passenger extends BaseEntity {
     private String firstName;
     private String lastName;
