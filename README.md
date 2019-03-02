@@ -1,11 +1,11 @@
 ##### **Model:**
 
-![pic1](/home/maya/IdeaProjects/railwaybookingoffice/src/main/resources/umls/Model0.jpg)
+![pic1](/home/maya/IdeaProjects/railwaybookingoffice/umls/generic0.png)
 
-![pic](https://github.com/ta4anka/RailwayBookingOfficeApp/blob/master/src/main/resources/umls/Model0.png)
+![pic](umls/generic0.png)
 
 ##### **Repository:**
 
-![pic2](/home/maya/IdeaProjects/railwaybookingoffice/src/main/resources/umls/generic0.png)
+![pic2]()
 
 
