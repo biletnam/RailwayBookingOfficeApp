@@ -1,11 +1,8 @@
 ##### **Model:**
-
-![pic1](/home/maya/IdeaProjects/railwaybookingoffice/umls/generic0.png)
-
-![pic](umls/generic0.png)
+![pic](umls/Model0.jpg)
 
 ##### **Repository:**
 
-![pic2]()
+![pic2](umls/generic0.png)
 
 
