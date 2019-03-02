@@ -28,17 +28,6 @@ public class RouteController {
     }
 
 
-   /* public List<model.Route> searchByDeparturePlace(String departurePlace) throws IOException {
-      return routeRepo.searchByDeparturePlace(departurePlace);
-    }
-
-    public List<model.Route> searchByarrivalPlace(String arrivalPlace) throws IOException {
-        return routeRepo.searchByarrivalPlace(arrivalPlace);
-    }
-
-    public List<model.Route> searchByDate(String date) {
-        return null;
-    }*/
 
 
 

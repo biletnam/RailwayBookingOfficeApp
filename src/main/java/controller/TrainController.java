@@ -5,6 +5,7 @@ import repository.TrainRepo;
 import repository.TrainRepoImpl;
 
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.List;
 
 public class TrainController {
@@ -26,6 +27,11 @@ public class TrainController {
 
     public Train getById(Integer id) throws IOException {
         return tr.getById(id);
+    }
+
+    public List<Train> generalSearch(String departurePlace, String arrivalPlace, LocalDate departureDate)
+            throws IOException {
+        return tr.generalSearch(departurePlace, arrivalPlace, departureDate);
     }
 }
 

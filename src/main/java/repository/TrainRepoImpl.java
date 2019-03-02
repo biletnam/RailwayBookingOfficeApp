@@ -131,14 +131,6 @@ public class TrainRepoImpl implements TrainRepo {
         return null;
     }
 
-//    @Override
-//    105,1,2019-03-01T10:00,2019-03-01T22:00,[1, 2, 3, 4, 5]
-    /*id;
-    private model.Route route;
-    private LocalDateTime departureTime;
-    private LocalDateTime arrivalTime;
-    private  List<model.Carriage> carriages*/;
-
     // https://ramj2ee.blogspot.com/2018/01/how-to-convert-localdatetime-to_37.html
     public List<Train> generalSearch(String departurePlace, String arrivalPlace, LocalDate departureDate)
             throws IOException {
