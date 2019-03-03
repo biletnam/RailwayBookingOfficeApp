@@ -34,7 +34,8 @@ public class Route extends BaseEntity {
     @Override
     public String toString() {
         return "Route{" +
-                departurePlace + '\'' +
+                "Id=" + super.getId() + " | "
+                +departurePlace + '\'' +
                 " <---> '" + arrivalPlace + '\'' +
                 '}';
     }

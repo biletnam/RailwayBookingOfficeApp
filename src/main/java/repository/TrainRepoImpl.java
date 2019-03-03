@@ -1,6 +1,7 @@
 package repository;
 
 import model.Carriage;
+import model.CarriageType;
 import model.Route;
 import model.Train;
 
@@ -76,7 +77,7 @@ public class TrainRepoImpl implements TrainRepo {
     }
 
 
-    //----------------------------------Parsing method for the model.Carriage'd Ids----------------:
+    //----------------------------------Parsing method for the Carriage'd Ids----------------:
     private static List<Carriage> parseStringWithCarriageId(String line) throws IOException {
 
         String carriageId = line.substring(line.indexOf("[") + 1, line.indexOf("]"));
@@ -88,7 +89,7 @@ public class TrainRepoImpl implements TrainRepo {
         for (String Id : carriageIdListString) {
             carriageIdListInteger.add(Integer.parseInt(Id));
         }
-        // 3)---- getting instance of model.Carriage and adding to List------:
+        // 3)---- getting instance of Carriage and adding to List------:
         List<Carriage> trainCarriages = new ArrayList<>();
         for (Integer integer : carriageIdListInteger) {
             CarriageRepo cr = new CarriageRepoImpl();
@@ -132,8 +133,9 @@ public class TrainRepoImpl implements TrainRepo {
     }
 
     // https://ramj2ee.blogspot.com/2018/01/how-to-convert-localdatetime-to_37.html
-    public List<Train> generalSearch(String departurePlace, String arrivalPlace, LocalDate departureDate)
-            throws IOException {
+    public List<Train> generalSearch(String departurePlace,
+                                     String arrivalPlace,
+                                     LocalDate departureDate) throws IOException {
         File fileWithTrains = new File(TRAIN_FILE_PATH);
         List<Train> listWithTrain = new ArrayList<>();
         FileReader fr = new FileReader(fileWithTrains);

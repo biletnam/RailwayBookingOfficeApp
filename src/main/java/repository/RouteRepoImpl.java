@@ -23,8 +23,27 @@ public class RouteRepoImpl implements RouteRepo {
         }
     }
 
-    public List<Route> findAll() {
-        return null;
+    public List<Route> findAll() throws IOException {
+        File fileWithRoutes = new File(PASSENGER_FILE_PATH);
+        FileReader fr = new FileReader(fileWithRoutes);
+        List<String> tempList = new ArrayList<>();
+        List<Route> routesList = new ArrayList<>();
+        String line;
+
+        try(BufferedReader br = new BufferedReader(fr)){
+            while((line = br.readLine()) != null){
+                tempList.add(line);
+            }
+
+            for(String aTempList: tempList){
+                String[] arrOfStr = aTempList.split(",");
+                routesList.add(new Route(
+                        Integer.parseInt(arrOfStr[0]),
+                        arrOfStr[1],
+                        arrOfStr[2]));
+            }
+        }
+        return routesList;
     }
 
     public void delete(Integer id) throws IOException {
