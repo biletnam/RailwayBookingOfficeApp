@@ -19,9 +19,9 @@ public class ConsoleHelper {
     public void getMenu() throws IOException {
 
 
-        System.out.println("Enter: P - for Passenger, C - for Carriage R - for Route, T - for Train");
+        System.out.println("Enter: 'P' - for Passenger, 'C' - for Carriage 'R' - for Route," +
+                " 'T' - for Train, 'Ticket' - for Ticket.");
         String userChoice = scanner.next();
-
         switch (userChoice) {
             case "P":
                 passengerView.getPassengerView();

@@ -28,10 +28,10 @@ public class CarriageController {
          return carriageRepo.getById(id);
     }
 
-    void decreaseNumberOfFreeSeats(Integer carriageId,int purchasedPlace) throws IOException{
+    public void decreaseNumberOfFreeSeats(Integer carriageId,int purchasedPlace) throws IOException{
         carriageRepo.decreaseNumberOfFreeSeats(carriageId,purchasedPlace);
     };
-    void increaseNumberOfFreeSeats(Integer carriageId,int returnedTicket) throws IOException{
+    public void increaseNumberOfFreeSeats(Integer carriageId,int returnedTicket) throws IOException{
         carriageRepo.increaseNumberOfFreeSeats(carriageId,returnedTicket);
 
     };

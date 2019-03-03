@@ -79,10 +79,10 @@ public class ZTestAppRunner {
         carriageRepo.save(carriage50);
         carriageRepo.save(carriage60);
 
-        carriageRepo.decreaseNumberOfFreeSeats(4,1); //
+   /*     carriageRepo.decreaseNumberOfFreeSeats(4,1); //
         carriageRepo.decreaseNumberOfFreeSeats(4,2); //
         carriageRepo.decreaseNumberOfFreeSeats(4,3); //
-        carriageRepo.decreaseNumberOfFreeSeats(4,27); //
+        carriageRepo.decreaseNumberOfFreeSeats(4,27); //*/
 
         /*carriageRepo.increaseNumberOfFreeSeats(4,2);
         carriageRepo.increaseNumberOfFreeSeats(4,3);
@@ -97,16 +97,6 @@ public class ZTestAppRunner {
 
 
 //        System.out.println(carriageRepo.getCurrentFreeSeats(4));
-
-
-
-
-
-
-
-
-
-
 
 //--------------------------Testing model.Route--------------------------------------------------
         RouteRepo rr = new RouteRepoImpl();
@@ -164,9 +154,6 @@ public class ZTestAppRunner {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy,MM,dd,HH,mm");
 
         //--------------------------------------------------------------------------------
-
-
-
 
         LocalDateTime departureDateTime = LocalDateTime.parse(departureStr, formatter);
         LocalDateTime arrivalDateTime = LocalDateTime.parse(arrivalStr, formatter);

@@ -64,13 +64,11 @@ public class Ticket extends BaseEntity {
 
     @Override
     public String toString() {
-        return "Ticket{" +
-                "Passenger=" + Passenger +
-                ", numberOfTrain=" + numberOfTrain +
-                ", numberOfCarriage=" + numberOfCarriage +
-                ", place=" + place +
-                ", price=" + price +
-                '}';
+        return "Ticket Id: " + super.getId() + "\n" + Passenger +
+                "| numberOfTrain: " + numberOfTrain +
+                " | numberOfCarriage: " + numberOfCarriage +
+                " | place: " + place +
+                " | price: " + price + " | ";
     }
 }
 

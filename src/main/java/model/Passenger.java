@@ -33,10 +33,6 @@ public class Passenger extends BaseEntity {
 
     @Override
     public String toString() {
-        return "Passenger{" +
-                "id=' " + super.getId() + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                '}';
+        return "Passenger Id: " + super.getId()  + "\n" + "Name: "  + firstName + " " + lastName + "\n";
     }
 }
