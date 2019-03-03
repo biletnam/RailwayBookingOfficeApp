@@ -186,10 +186,7 @@ public class ZTestAppRunner {
             System.out.println("trainee: " + trainee.getId() + " | " + trainee.getRoute());
 
         }
-
-
-
-//---------------------------Testing model.Ticket----------------------------------------------------
+        //---------------------------Testing model.Ticket----------------------------------------------------
 
 Ticket ticket1 = new Ticket(1,passenger,105,4,26,200);
 Ticket ticket2 = new Ticket(17,passenger,105,4,30,200);
@@ -197,26 +194,5 @@ Ticket ticket2 = new Ticket(17,passenger,105,4,30,200);
 TicketRepo ticketRepo = new TicketRepoImpl();
 ticketRepo.save(ticket1);
 ticketRepo.save(ticket2);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }
+}
 }
