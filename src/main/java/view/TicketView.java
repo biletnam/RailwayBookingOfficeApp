@@ -128,14 +128,15 @@ public class TicketView {
                     System.out.println("Do you want to continue work with this menu?");
                     input = scanner.next();
                     break;
-
-                case "menu":
+                    case "menu":
                     ConsoleHelper ch = new ConsoleHelper();
                     ch.getMenu();
-                default:
+                    break;
+                    default:
                     System.out.println("Please,make your choice!");
                     input = scanner.next();
             }
         }
+        System.out.println("The time of stop application: " + LocalDateTime.now());
     }
 }

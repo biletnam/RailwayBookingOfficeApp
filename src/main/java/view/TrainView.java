@@ -122,5 +122,6 @@ public class TrainView {
                     input = scanner.next();
             }
         }
+        System.out.println("The time of stop application: " + LocalDateTime.now());
     }
 }

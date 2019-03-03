@@ -4,6 +4,7 @@ import controller.PassengerController;
 import model.Passenger;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
 import java.util.Scanner;
 
 public class PassengerView {
@@ -69,5 +70,6 @@ public class PassengerView {
                     input = scanner.next();
             }
         }
+        System.out.println("The time of stop application: " + LocalDateTime.now());
     }
 }

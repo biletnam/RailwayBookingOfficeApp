@@ -6,6 +6,7 @@ import controller.RouteController;
 import model.Route;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
 import java.util.Scanner;
 
 public class RouteView {
@@ -66,5 +67,6 @@ public class RouteView {
                     input = scanner.next();
             }
         }
+        System.out.println("The time of stop application: " + LocalDateTime.now());
     }
 }

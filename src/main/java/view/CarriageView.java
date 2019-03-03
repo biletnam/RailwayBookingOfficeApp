@@ -5,6 +5,7 @@ import model.Carriage;
 import model.CarriageType;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Scanner;
 
@@ -69,5 +70,6 @@ public class CarriageView {
                     input = scanner.next();
             }
         }
+        System.out.println("The time of stop application: " + LocalDateTime.now());
     }
 }
