@@ -15,17 +15,20 @@ public class PassengerController {
         }else PassengerRepo.save(passenger);
     }
 
-
-
     public List<Passenger> findAll() throws IOException {
         return PassengerRepo.findAll();
     }
 
     public void delete(Integer id) throws IOException {
-        PassengerRepo.delete(id);
+        if(id == null || id < 0) {
+    throw new IllegalArgumentException();
+        }else PassengerRepo.delete(id);
+
     }
 
     public Passenger getById(Integer id) throws IOException {
-        return PassengerRepo.getById(id);
+        if(id == null || id < 0) {
+            throw new IllegalArgumentException();
+        }else return PassengerRepo.getById(id);
     }
 }

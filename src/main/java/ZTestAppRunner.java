@@ -98,7 +98,7 @@ public class ZTestAppRunner {
 
 //        System.out.println(carriageRepo.getCurrentFreeSeats(4));
 
-//--------------------------Testing model.Route--------------------------------------------------
+//--------------------------Testing Route--------------------------------------------------
         RouteRepo rr = new RouteRepoImpl();
 
       /*  String departureStr = "2019,03,01,10,00";

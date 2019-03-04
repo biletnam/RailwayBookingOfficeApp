@@ -5,6 +5,7 @@ import model.Route;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class RouteRepoImpl implements RouteRepo {
@@ -37,10 +38,9 @@ public class RouteRepoImpl implements RouteRepo {
 
             for(String aTempList: tempList){
                 String[] arrOfStr = aTempList.split(",");
-                routesList.add(new Route(
-                        Integer.parseInt(arrOfStr[0]),
-                        arrOfStr[1],
-                        arrOfStr[2]));
+                int routeId = Integer.parseInt(arrOfStr[0]);
+                Route route = new Route(routeId,arrOfStr[1], arrOfStr[2]);
+                routesList.add(route);
             }
         }
         return routesList;

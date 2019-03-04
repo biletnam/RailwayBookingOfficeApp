@@ -21,19 +21,28 @@ public class CarriageController {
     }
 
     public void delete(Integer id) throws IOException{
-        carriageRepo.delete(id);
+        if(id == null || id < 0) {
+            throw new IllegalArgumentException();
+        }else carriageRepo.delete(id);
     }
 
     public Carriage getById(Integer id) throws IOException {
-         return carriageRepo.getById(id);
+        if(id == null || id < 0) {
+            throw new IllegalArgumentException();
+        }else return carriageRepo.getById(id);
     }
 
     public void decreaseNumberOfFreeSeats(Integer carriageId,int purchasedPlace) throws IOException{
-        carriageRepo.decreaseNumberOfFreeSeats(carriageId,purchasedPlace);
+        if((carriageId == null || carriageId < 0) &&
+                (purchasedPlace  == 0 || purchasedPlace < 0)) {
+            throw new IllegalArgumentException();
+        }else carriageRepo.decreaseNumberOfFreeSeats(carriageId,purchasedPlace);
     };
     public void increaseNumberOfFreeSeats(Integer carriageId,int returnedTicket) throws IOException{
-        carriageRepo.increaseNumberOfFreeSeats(carriageId,returnedTicket);
-
+        if((carriageId == null || carriageId < 0) &&
+                (returnedTicket  == 0 || returnedTicket < 0)) {
+            throw new IllegalArgumentException();
+        }else carriageRepo.increaseNumberOfFreeSeats(carriageId,returnedTicket);
     };
 
 

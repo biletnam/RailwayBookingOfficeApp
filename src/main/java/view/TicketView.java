@@ -40,7 +40,7 @@ public class TicketView {
                 "'search' for searching a ticket according the several parameters" + "\n" +
                 "'buy' for buying new ticket" + "\n" +
                 "'return' for return your ticket" + "\n" +
-                "'menu' for return to Admin menu" + "\n+" +
+                "'menu' for return to main menu" + "\n+" +
                 "'exit' for exit");
         Ticket ticketToBuy = new Ticket();
         String input = scanner.nextLine();
@@ -118,9 +118,9 @@ public class TicketView {
                     break;
 
                 case "return":
-                    System.out.println("Enter id of your carriage: ");
+                    System.out.println("Enter number of your carriage: ");
                     int carriageIdTicketReturned = Integer.parseInt(scanner.next());
-                    System.out.println("Enter id of ticket you want to return: ");
+                    System.out.println("Enter place you want to return: ");
                     int idTicketReturned = Integer.parseInt(scanner.next());
                     ticketController.delete(idTicketReturned);
                     cc.increaseNumberOfFreeSeats(carriageIdTicketReturned,idTicketReturned);
@@ -137,6 +137,7 @@ public class TicketView {
                     input = scanner.next();
             }
         }
-        System.out.println("The time of stop application: " + LocalDateTime.now());
+        System.out.println("The application was stopped at " + LocalDateTime.now());
+        System.exit(0);
     }
 }

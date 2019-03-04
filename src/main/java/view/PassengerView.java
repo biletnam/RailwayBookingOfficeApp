@@ -18,7 +18,7 @@ public class PassengerView {
                 "'add' for adding new Passenger" +"\n" +
                 "'delete' for deleting passenger" +"\n" +
                 "show' for showing all the passengers"  +"\n" +
-                "'menu' for return to Admin menu" +"\n+" +
+                "'menu' for return to main menu" +"\n+" +
                 "'exit' for exit");
 
         String input  = scanner.nextLine();
@@ -71,5 +71,6 @@ public class PassengerView {
             }
         }
         System.out.println("The time of stop application: " + LocalDateTime.now());
+        System.exit(0);
     }
 }

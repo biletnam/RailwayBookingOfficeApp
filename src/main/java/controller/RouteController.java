@@ -21,10 +21,14 @@ public class RouteController {
         return routeRepo.findAll();
     }
     public void delete(Integer id) throws IOException{
-        routeRepo.delete(id);
+        if(id == null || id < 0) {
+            throw new IllegalArgumentException();
+        }else routeRepo.delete(id);
     }
     public Route getById(Integer id) throws IOException {
-        return routeRepo.getById(id);
+        if(id == null || id < 0) {
+            throw new IllegalArgumentException();
+        }else return routeRepo.getById(id);
     }
 
 

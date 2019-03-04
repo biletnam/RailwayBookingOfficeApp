@@ -22,16 +22,24 @@ public class TrainController {
     }
 
     public void delete(Integer id) throws IOException {
-        tr.delete(id);
+        if(id == null || id < 0) {
+            throw new IllegalArgumentException();
+        }else tr.delete(id);
     }
 
     public Train getById(Integer id) throws IOException {
-        return tr.getById(id);
+        if(id == null || id < 0) {
+            throw new IllegalArgumentException();
+        }else return tr.getById(id);
     }
 
     public List<Train> generalSearch(String departurePlace, String arrivalPlace, LocalDate departureDate)
             throws IOException {
-        return tr.generalSearch(departurePlace, arrivalPlace, departureDate);
+        if(departurePlace == null || arrivalPlace == null|| departureDate== null ){
+            throw new IllegalArgumentException();
+        } else {
+            return tr.generalSearch(departurePlace, arrivalPlace, departureDate);
+        }
     }
 }
 

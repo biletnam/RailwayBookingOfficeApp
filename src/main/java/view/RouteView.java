@@ -19,7 +19,7 @@ public class RouteView {
                 "'add' for adding new route" + "\n" +
                 "'delete' for deleting route" + "\n" +
                 "show' for showing all the routes" + "\n" +
-                "'menu' for return to menu" + "\n+" +
+                "'menu' for return to main menu" + "\n+" +
                 "'exit' for exit");
 
         String input = scanner.nextLine();
@@ -68,5 +68,6 @@ public class RouteView {
             }
         }
         System.out.println("The time of stop application: " + LocalDateTime.now());
+        System.exit(0);
     }
 }

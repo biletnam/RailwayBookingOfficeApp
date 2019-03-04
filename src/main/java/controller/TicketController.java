@@ -19,11 +19,15 @@ public class TicketController {
     }
 
     public void delete(Integer id) throws IOException {
-        ticketRepo.delete(id);
+        if(id == null || id < 0) {
+            throw new IllegalArgumentException();
+        }else ticketRepo.delete(id);
     }
 
 
     public Ticket getById(Integer id) throws IOException {
-        return ticketRepo.getById(id);
+        if(id == null || id < 0) {
+            throw new IllegalArgumentException();
+        }else return ticketRepo.getById(id);
     }
 }

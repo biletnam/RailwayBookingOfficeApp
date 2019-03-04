@@ -47,7 +47,7 @@ public class TrainView {
         System.out.println("Enter:" + "\n" +
                 "'add' for adding new train" + "\n" +
                 "'delete' for deleting train" + "\n" +
-                "'menu' for return to menu" + "\n+" +
+                "'menu' for return to main menu" + "\n+" +
                 "'exit' for exit");
 
         String input = scanner.nextLine();
@@ -123,5 +123,6 @@ public class TrainView {
             }
         }
         System.out.println("The time of stop application: " + LocalDateTime.now());
+        System.exit(0);
     }
 }
