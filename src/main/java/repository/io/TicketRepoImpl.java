@@ -1,7 +1,10 @@
-package repository;
+package repository.io;
 
 import model.Passenger;
 import model.Ticket;
+import repository.PassengerRepo;
+import repository.TicketRepo;
+import repository.io.PassengerRepoImpl;
 
 import java.io.*;
 import java.util.ArrayList;

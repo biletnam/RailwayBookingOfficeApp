@@ -1,9 +1,13 @@
-package repository;
+package repository.io;
 
 import model.Carriage;
-import model.CarriageType;
 import model.Route;
 import model.Train;
+import repository.CarriageRepo;
+import repository.RouteRepo;
+import repository.TrainRepo;
+import repository.io.CarriageRepoImpl;
+import repository.io.RouteRepoImpl;
 
 
 import java.io.*;

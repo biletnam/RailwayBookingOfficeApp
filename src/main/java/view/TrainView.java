@@ -7,7 +7,7 @@ import model.Carriage;
 import model.Route;
 import model.Train;
 import repository.CarriageRepo;
-import repository.CarriageRepoImpl;
+import repository.io.CarriageRepoImpl;
 
 import java.io.IOException;
 import java.time.LocalDateTime;

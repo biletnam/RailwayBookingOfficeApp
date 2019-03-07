@@ -2,7 +2,7 @@ package controller;
 
 import model.Ticket;
 import repository.TicketRepo;
-import repository.TicketRepoImpl;
+import repository.io.TicketRepoImpl;
 
 import java.io.IOException;
 import java.util.List;

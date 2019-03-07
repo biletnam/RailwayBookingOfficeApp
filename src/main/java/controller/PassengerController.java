@@ -1,7 +1,7 @@
 package controller;
 
 import model.Passenger;
-import repository.PassengerRepoImpl;
+import repository.io.PassengerRepoImpl;
 
 import java.io.IOException;
 import java.util.List;

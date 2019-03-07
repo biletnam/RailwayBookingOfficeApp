@@ -2,7 +2,7 @@ package controller;
 
 import model.Carriage;
 import repository.CarriageRepo;
-import repository.CarriageRepoImpl;
+import repository.io.CarriageRepoImpl;
 
 import java.io.IOException;
 import java.util.List;

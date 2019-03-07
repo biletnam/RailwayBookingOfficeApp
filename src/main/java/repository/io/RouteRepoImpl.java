@@ -1,6 +1,7 @@
-package repository;
+package repository.io;
 
 import model.Route;
+import repository.RouteRepo;
 
 
 import java.io.*;
@@ -10,7 +11,7 @@ import java.util.List;
 
 public class RouteRepoImpl implements RouteRepo {
     private static final String PASSENGER_FILE_PATH = "/home/maya/IdeaProjects/railwaybookingoffice/" +
-                                                        "src/main/resources/Routes.csv";
+                                                        "src/main/resources/routes.csv";
 
     public void save(Route route) throws IOException {
         File fileWithRoutes = new File(PASSENGER_FILE_PATH);

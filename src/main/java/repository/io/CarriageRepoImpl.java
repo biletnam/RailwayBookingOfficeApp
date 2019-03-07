@@ -1,7 +1,8 @@
-package repository;
+package repository.io;
 
 import model.Carriage;
 import model.CarriageType;
+import repository.CarriageRepo;
 
 
 import java.io.*;

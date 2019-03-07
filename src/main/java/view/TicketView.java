@@ -5,8 +5,6 @@ import model.Carriage;
 import model.Passenger;
 import model.Ticket;
 import model.Train;
-import repository.CarriageRepo;
-import repository.CarriageRepoImpl;
 
 import java.io.IOException;
 import java.time.LocalDate;
